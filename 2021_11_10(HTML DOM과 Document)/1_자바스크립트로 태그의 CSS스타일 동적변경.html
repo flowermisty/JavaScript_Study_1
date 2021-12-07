@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS스타일 동적 변경</title>
+    <script>
+        //기존 코드에서 클릭시 마다 변경 원복을 반복하도록 코드 응용
+        var b = 0;
+        function change(a){
+
+            if(b == 0){
+                var span = document.getElementById("mySpan");
+                span.style.color = "green";
+                span.style.fontSize = "30px";
+                span.style.display = "block";
+                span.style.width = "6em";
+                span.style.border = "3px solid magenta";
+                span.style.margin = "20px";
+                b = 1;
+            }else if(b == 1) {
+                var span = document.getElementById("mySpan");
+                span.style.color = "red";
+                span.style.fontSize = "";
+                span.style.display = "";
+                span.style.width = "";
+                span.style.border = "";
+                span.style.margin = "";
+                b = 0;
+            }
+
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <h3>Css스타일 동적 변경</h3>
+    <hr>
+    <p style = "color: #2c7aca;">
+        이것은
+        <span id = "mySpan" style="color: red;">문장입니다.</span>
+    </p>
+
+    <input type="button" value = "스타일 변경" onclick="change()">
+</body>
+</html>

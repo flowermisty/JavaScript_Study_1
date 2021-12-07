@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>객체의 생성 및 활용</title>
+
+</head>
+<body>
+<!--
+<자바스크립트 코어 객체 종류>
+    Array
+    Date
+    String
+    Math
+
+    var today = new Date();
+    var msg = new String("Hello");
+    //여기서 today와 msg는 참조 변수 이다.
+    //많은 경우에 그냥 객체라고 부른다.
+
+    //접근
+    //obj.프로퍼티 = 값;
+    //변수 = obj.프로퍼티;
+    //obj.메소드(매개변수 값);
+-->
+<h3>객체의 생성 및 활용</h3>
+<hr>
+<script>
+   //date객체 생성
+   var today = new Date();
+
+   //date 객체의 toLocalString()메소드 호출
+   document.write("현재시간 : "+today.toLocaleString()+"<br/>");
+
+   //String 객체 생성
+   var mystr = new String("Javascript study");
+   document.write("mystr의 내용 :"+mystr+"<br/>");
+   document.write("mystr의 길이 :"+mystr.length+"<br/>");
+
+   //new 연산자를 사용하여 객체를 생성할 수는 있지만 객체를 소멸 시키는 코드나 방법은 없음.
+   //사용하지않는 객체들을 자동수거하는 GC 기법이 사용된다.
+</script>
+</body>
+</html>

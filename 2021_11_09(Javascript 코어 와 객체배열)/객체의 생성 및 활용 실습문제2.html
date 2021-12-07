@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>실습문제2</title>
+</head>
+<body>
+<h3>정수 5개를 입력받아 역순으로 출력</h3>
+<hr>
+<script>
+    var a = [];
+    for (let i = 0; i < 5; i++) {
+        a[i] = prompt("정수를 입력해주세요","");
+        if(isNaN(a[i])){
+         alert("숫자가 아닙니다.");
+         i--;
+         if(i == 0){
+              i = 0;
+          }
+        }
+    }
+    a.reverse();
+    for (let i = 0; i < 5; i++) {
+        document.write(a[i]+"<br/>");
+    }
+
+</script>
+
+</body>
+</html>
